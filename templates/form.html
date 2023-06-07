@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Image Scraper</title><link rel="stylesheet" href="/build/css-bundle-EVNNWMU6.css"/></head><body><script>window.ENV = {API_HOST:"https://web-scraper-api-tu22.onrender.com"}</script><div><div class="ui segment"><form style="padding:20px" class="ui form"><div class="field"><label>Minimum image width:<input name="minWidth" type="number" pattern="\d+" required="" value="200"/></label></div><div class="field"><label>Minimum image height:<input name="minHeight" mask="9999" type="number" pattern="\d+" required="" value="200"/></label></div><div class="field"><label>URL:<input name="url" type="url" pattern="https?://.+" placeholder="http://example.com" required="" value="https://symfony.com/blog/new-in-symfony-3-3-optional-class-for-named-services"/></label></div><button name="url" class="ui button" type="submit">Fetch</button></form><div class="ui active dimmer"><div class="ui text loader">Loading, please wait ...</div></div></div><div class="grid"><div style="clear:both"></div></div></div><script>((STORAGE_KEY, restoreKey) => {
+    if (!window.history.state || !window.history.state.key) {
+      let key = Math.random().toString(32).slice(2);
+      window.history.replaceState({
+        key
+      }, "");
+    }
+    try {
+      let positions = JSON.parse(sessionStorage.getItem(STORAGE_KEY) || "{}");
+      let storedY = positions[restoreKey || window.history.state.key];
+      if (typeof storedY === "number") {
+        window.scrollTo(0, storedY);
+      }
+    } catch (error) {
+      console.error(error);
+      sessionStorage.removeItem(STORAGE_KEY);
+    }
+  })("positions", null)</script><link rel="modulepreload" href="/build/manifest-D59D572D.js"/><link rel="modulepreload" href="/build/entry.client-D3BY7HQP.js"/><link rel="modulepreload" href="/build/_shared/chunk-KYN5ISMX.js"/><link rel="modulepreload" href="/build/_shared/chunk-OQ4ZS5ZH.js"/><link rel="modulepreload" href="/build/root-SMV74RLB.js"/><link rel="modulepreload" href="/build/routes/_index-5PMXG7PZ.js"/><script>window.__remixContext = {"state":{"loaderData":{"root":{"publicKeys":{}},"routes/_index":null},"actionData":null,"errors":null},"future":{"unstable_dev":false,"unstable_postcss":false,"unstable_tailwind":false,"v2_errorBoundary":true,"v2_meta":true,"v2_normalizeFormMethod":true,"v2_routeConvention":true}};</script><script type="module" async="">import "/build/manifest-D59D572D.js";
+import * as route0 from "/build/root-SMV74RLB.js";
+import * as route1 from "/build/routes/_index-5PMXG7PZ.js";
+window.__remixRouteModules = {"root":route0,"routes/_index":route1};
+
+import("/build/entry.client-D3BY7HQP.js");</script></body></html>

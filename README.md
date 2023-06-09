@@ -1,4 +1,4 @@
-## Web Scraper site for downloading images from websites ##
+## Website for downloading images from websites ##
 
 ### Installation ###
 composer install

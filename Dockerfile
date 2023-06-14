@@ -3,7 +3,7 @@ FROM bitnami/symfony:latest
 COPY . /app
 
 ENV SYMFONY_PROJECT_SKELETON symfony/skeleton
-ENV SYMFONY_DATABASE_PASSWORD
+ENV SYMFONY_DATABASE_PASSWORD ''
 ENV ALLOW_EMPTY_PASSWORD yes
 
 RUN echo extension=curl >> /opt/bitnami/php/etc/php.ini
